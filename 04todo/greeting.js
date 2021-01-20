@@ -29,15 +29,6 @@ function paintGreeting(text) {
     greeting.innerText = `${text}님 좋은 하루 보내세요.`
 }
 
-function loadName() {
-    const currentUser = localStorage.getItem(USER_LS);
-    if(currentUser === null) {
-        askForName();
-    } else {
-        paintGreeting(currentUser);
-    }
-}
-
 function reset() {
     localStorage.removeItem('currentUser');
     greeting.classList.remove(SHOWING_CN);
@@ -45,9 +36,19 @@ function reset() {
     btn.classList.add("btn");
 }
 
+function loadName() {
+    const currentUser = localStorage.getItem(USER_LS);
+    if(currentUser === null) {
+        askForName();
+        btn.addEventListener("click", reset);
+    } else {
+        paintGreeting(currentUser);
+        btn.addEventListener("click", reset);
+    }
+}
+
 function init() {
     loadName();
-    btn.addEventListener("click", reset);
 }
 
 init();
