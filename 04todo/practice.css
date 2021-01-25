@@ -27,11 +27,12 @@ h1{
 .form{
     display: none;
     border-radius: 10px;
-    margin: 2em;
+    margin: 2em 0;
 }
 
 .text{
     border-radius: 10px;
+    width: 50%;
     height: 2em;
     text-align: center;
     font-size: 1.5em;
@@ -118,7 +119,7 @@ h1{
     opacity: 0.8;
 }
 
-@media screen and (max-width: 760px) {
+@media screen and (max-width: 768px) {
     .container{width: 90%; min-height: 300px;}
     .clock{font-size: 2em;}
     .greetings{font-size: 1.2em;}

@@ -31,9 +31,7 @@ function paintGreeting(text) {
 
 function reset() {
     localStorage.removeItem('currentUser');
-    greeting.classList.remove(SHOWING_CN);
-    form.classList.add(SHOWING_CN);
-    btn.classList.add("btn");
+    location.reload();
 }
 
 function loadName() {
@@ -42,7 +40,7 @@ function loadName() {
         askForName();
         btn.addEventListener("click", reset);
     } else {
-        paintGreeting(currentUser);
+        paintGreeting(currentUser);        
         btn.addEventListener("click", reset);
     }
 }
