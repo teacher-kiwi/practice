@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox</title>
+</head>
+<body>
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
+    <style>
+        body {margin: 0; border: 0; font-family: 'Roboto Mono', monospace;}
+        h1 {font-size: 18px; text-align: center;}
+        h2 {font-size: 16px; text-align: center;}
+        .container {background-color: whitesmoke;}
+        .box {background-color: Dodgerblue; height: 200px; width: 200px; border: 1px solid lightgrey;}
+
+        /* display 값 비교 */
+
+    </style>
+
+    <h1>Display: Flex</h1>
+    <div class="container" style="display: flex;">
+        <div class="box" display="display: flex;"><h2>1</h2></div>
+        <div class="box"><h2>2</h2></div>
+        <div class="box"><h2>3</h2></div>
+    </div>
+
+    <h1>Display: Block</h1>
+    <div class="container" style="display: block">
+        <div class="box"><h2>1</h2></div>
+        <div class="box"><h2>2</h2></div>
+        <div class="box"><h2>3</h2></div>
+    </div>
+
+    <h1>Display: Inline</h1>
+    <div class="container" style="display: inline;">
+        <div class="box"><h2>1</h2></div>
+        <div class="box"><h2>2</h2></div>
+        <div class="box"><h2>3</h2></div>
+    </div>
+    
+    <div class="container" style="display: inline;">
+        <div class="box"><h2>1</h2></div>
+        <div class="box"><h2>2</h2></div>
+        <div class="box"><h2>3</h2></div>
+    </div>
+
+    <h1>Display: Inline-flex</h1>
+    <div class="container" style="display: inline-flex;">
+        <div class="box"><h2>1</h2></div>
+        <div class="box"><h2>2</h2></div>
+        <div class="box"><h2>3</h2></div>
+    </div>
+    <div class="container" style="display: inline-flex;">
+        <div class="box"><h2>1</h2></div>
+        <div class="box"><h2>2</h2></div>
+        <div class="box"><h2>3</h2></div>
+    </div>
+
+    <h1>Display: Inline-block</h1>
+    <div class="container" style="display: inline-block;">
+        <div class="box"><h2>1</h2></div>
+        <div class="box"><h2>2</h2></div>
+        <div class="box"><h2>3</h2></div>
+    </div>
+    
+    <div class="container" style="display: inline-block;">
+        <div class="box"><h2>1</h2></div>
+        <div class="box"><h2>2</h2></div>
+        <div class="box"><h2>3</h2></div>
+    </div>
+
+</body>
+</html>
