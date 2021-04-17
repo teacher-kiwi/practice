@@ -10,7 +10,8 @@ function deleteName(){
 }
 
 function handleClick(){
-    deleteName()
+    deleteName();
+    input.value="";
     this.classList.add(NOSHOWING_CN);
     askForName();
 }
