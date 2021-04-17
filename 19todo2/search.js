@@ -4,7 +4,7 @@ const searchDiv = document.querySelector(".js-search"),
     searchBar = searchDiv.querySelector("input");
 
 
-function handleSubmit(event){
+function handleSearch(event){
     event.preventDefault();
     console.log(searchBar.value);
     window.open(`http://www.google.co.kr/search?q=${searchBar.value}`);
@@ -12,13 +12,13 @@ function handleSubmit(event){
 
 }
 
-function handleClick(event){
+function handleShowing(event){
     searchBar.classList.toggle("active");
 }
 
 function init(){
-    searchButton.addEventListener("click", handleClick);
-    searchForm.addEventListener("submit", handleSubmit);
+    searchButton.addEventListener("click", handleShowing);
+    searchForm.addEventListener("submit", handleSearch);
 }
 
 init();

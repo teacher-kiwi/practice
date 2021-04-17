@@ -1,7 +1,7 @@
 const form = document.querySelector(".js-form"),
     input = form.querySelector("input"),
     greeting = document.querySelector("h4"),
-    reset = document.querySelector("button");
+    reset = document.querySelector(".js-button");
 const USER_LS = "currentUser",
     NOSHOWING_CN = "noshowing";
 
@@ -41,7 +41,7 @@ function paintGreeting(text){
     input.classList.add(NOSHOWING_CN);
     greeting.classList.remove(NOSHOWING_CN);
     reset.classList.remove(NOSHOWING_CN);
-    greeting.innerText = `안녕? ${text}`;
+    greeting.innerText = `${text}님, 오늘도 화이팅!`;
     resetName();
 }
 
