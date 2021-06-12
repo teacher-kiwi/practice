@@ -10,7 +10,7 @@ const API_KEY = "954dac30b088454d9a95700f044ce620",
 //     day = date.getDate(),
 //     today = `${year}${month < 10 ? `0${month}` : `${month}`}${day < 10 ? `0${day}` : `${day}`}`;
 
-const today = 20210601;
+const today = 20210615;
 
 const getMealTable = (API_KEY, OFFICE_CODE, SCHOOL_CODE, date) => {
     fetch(
