@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LocalStorage</title>
+    <style>
+        .noshow{display:none;}
+    </style>
+</head>
+<body>
+    <h1>LocalStorage 다루기 연습</h1>
+    <form class="form">
+        <input class="input" type="text" placeholder="입력해주세요." />
+        <input class="submit" type="submit" />
+        <input class="button" type="button" value="reset" />
+    </form>
+    <h2></h2>
+    <script>
+        const form = document.querySelector(".form"),
+            input = document.querySelector(".input"),
+            submit = document.querySelector(".submit"),
+            button = document.querySelector(".button"),
+            head = document.querySelector("h2");
+
+        const NOSHOW = "noshow";
+
+        function saveValue(value) {
+            localStorage.setItem("KEY", value);
+        }
+
+        function writeValue(){
+            const currentKey = localStorage.getItem("KEY");
+            head.innerHTML = "'" + currentKey + "'";
+        }
+
+        function handleSubmit(event){
+            event.preventDefault();
+            const currentValue = input.value;
+            saveValue(currentValue);            
+            writeValue();
+            button.classList.remove(NOSHOW);
+            input.classList.add(NOSHOW);
+            submit.classList.add(NOSHOW);
+        }
+
+        function handleReset(){
+            localStorage.removeItem("KEY");
+            button.classList.add(NOSHOW);
+            input.classList.remove(NOSHOW);
+            submit.classList.remove(NOSHOW);
+            head.innerHTML = "";
+        }
+
+        function checkValue(){
+            const currentKey = localStorage.getItem("KEY");
+            if(currentKey === null) {
+                button.classList.add(NOSHOW);
+            } else {
+                writeValue();
+                input.classList.add(NOSHOW);
+                submit.classList.add(NOSHOW);
+            }
+        }
+
+        function init(){
+            checkValue();
+            form.addEventListener("submit", handleSubmit);
+            button.addEventListener("click", handleReset);
+        }
+
+        init();
+    </script>
+</body>
+</html>

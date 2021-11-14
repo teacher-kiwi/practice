@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox / align-items</title>
+</head>
+<body>
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
+    <style>
+        body {font-family: 'Roboto Mono', monospace;}
+        h1 {margin: 20px; text-align: center; font-size: 18px;}
+        .container {height: 150px; background-color: WhiteSmoke; display: flex; justify-content: center;}
+        .left, .center, .right {min-height: 75px; width: 125px; background-color: DodgerBlue; border: 2px solid lightgrey; }
+        .center {height: 100px; width: 100px; border: 10px solid turquoise;}
+    </style>
+
+        <h1>align-items</h1>
+        <h1>flex-start</h1>
+        <div class="container" style="align-items: flex-start;">
+            <div class="left"></div>
+            <div class="center"></div>
+            <div class="right"></div>
+        </div>
+
+        <h1>Flex End</h1>
+        <div class="container" style="align-items: flex-end;">
+            <div class="left"></div>
+            <div class="center"></div>
+            <div class="right"></div>
+        </div>
+
+        <h1>Center</h1>
+        <div class="container" style="align-items: center;">
+            <div class="left"></div>
+            <div class="center"></div>
+            <div class="right"></div>
+        </div>
+
+        <h1>Baseline</h1>
+        <div class="container" style="align-items: baseline;">
+            <div class="left"></div>
+            <div class="center"></div>
+            <div class="right"></div>
+        </div>
+
+        <h1>Stretch</h1>
+        <div class="container" style="align-items: stretch;">
+            <div class="left"></div>
+            <div class="center"></div>
+            <div class="right"></div>
+        </div>
+
+</body>
+</html>

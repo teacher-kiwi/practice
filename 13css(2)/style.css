@@ -1,0 +1,143 @@
+* {
+    margin: auto;
+    padding: auto;
+  }
+  /* 디폴트 값을 리셋하는 법! "*"  */
+  /* visibility: hidden;(영역 O) / visible; */
+  /* display: none;(영역 X) / block; / inline;(사이즈 조절 불가) / inline-block; */
+
+
+body {
+    background-color: #FFF;
+    font-family: 'Raleway', sans-serif;
+  }
+
+.navigation ul {
+    margin: 0;
+    /* margin: 바깥 여백(value 4개는 위 오른 아래 왼 2개는 상하 좌우), margin-top, margin-right, margin-bottom, margin-left */
+    /* 가운데 정렬하는 법: width값을 작게 설정하고 margin 좌우 값을 auto로 */
+    /* 위아래 margin은 합쳐지고, 좌우 margin은 안 합쳐지고 유지됨. */
+    padding: 0;
+    text-align: center;
+}
+
+.navigation li {
+    font-weight: 100;
+    letter-spacing: 2px;
+    padding: 20px;
+    /* padding: 안쪽 여백(value 4개는 위 오른 아래 왼 2개는 상하 좌우), padding-top, padding-right, padding-bottom, padding-left */
+}
+  
+.navigation  li.logo {
+    color: black;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 4px;
+    padding: 0px 50px;
+}
+  
+#banner {
+    background-image: url("https://content.codecademy.com/courses/web-101/unit-6/htmlcss1-img_tahoe.jpeg");
+    background-size: cover;
+    background-position: bottom center;
+    height: 700px;
+    width: 100%;
+    /* height, width: 가로 세로 */
+    /* min-width, max-width로 최소, 최대 너비 설정 */
+}
+  
+#banner .content h1 {
+    border: 3px solid white;
+    /* border: 테두리
+    1, 2, 3:
+    width(두께), 
+    style(10가지 디자인) https://developer.mozilla.org/en-US/docs/Web/CSS/border-style#values, 
+    color(색) https://developer.mozilla.org/en-US/docs/Web/CSS/color_value */
+    
+    /* border-radius: 테두리 곡률; */
+    position: relative;
+    top: 50px;
+    width: 400px;
+    margin: 0 auto;
+}
+  
+#main {
+    margin: 0 auto;
+    padding: 40px;
+    text-align: center;
+    width: 400px;
+    height: 1000px;
+    overflow: scroll;
+    /* overflow: 내용이 box를 넘었을 때 어떻게 보일지 설정 */
+    /* value: hidden(숨김), scroll(스크롤), visible(넘침) */
+}
+  
+h1 {
+    color: white;
+    font-size: 42px;
+    font-weight: 600;
+    text-align: center;
+}
+  
+h2 {
+    border: 1px dotted red;
+    color: red;
+    font-size: 14px;
+    line-height: 48px;
+    padding: 20px 30px;
+    margin: 30px 20px;
+    text-align: center;
+}
+  
+h3 {
+    color: red;
+    font-size: 26px;
+    font-weight: 700;
+    padding: 20px 10px;
+}
+  
+p {
+    color: grey;
+    font-size: 16px;
+    line-height: 48px;
+    margin-top: 60px;
+    padding: 10px 20px;
+}
+  
+.pull-quote {
+    margin: 0 auto;
+    width: 400px;
+}
+  
+.byline {
+    border-bottom: 1px solid LightGrey;
+    border-top: 1px solid LightGrey;
+    color: DarkGrey;
+    font-size: 14px;
+    font-weight: 200;
+}
+  
+.share {
+    border: 1px solid LightGrey;
+    padding: 40px 0px;
+    position: relative;
+    text-align: center;
+    width: 100%;
+}
+  
+.share a {
+    background: red;
+    border: 1px solid red;
+    border-radius: 3px;
+    color: white;
+    display: inline-block;
+    margin: 10px;
+    padding: 14px;
+    text-decoration: none;
+}
+  
+.share a:hover {
+    background: white;
+    border: 1px solid red;
+    color: red;
+    

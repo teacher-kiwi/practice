@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>투 두 리스트!</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="practice.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class=container>
+        
+        <div class="js-clock clock">
+            <h1>00:00</h1>
+        </div>
+        
+        <form class="js-form form">
+            <input class="text" type="text" placeholder="What is your name?" />
+            <input class="submit" type="submit" value="submit" />
+        </form>
+        
+        <h3 class="js-greetings greetings"></h3>
+
+        <input class="js-btn btn" type="button" value="reset" />
+
+        
+        <form class="js-toDoForm">
+            <input class="text" type="text" placeholder="Write a to do" />
+            <input class="submit" type="submit" value="submit" />
+        </form>
+
+        <ul class="js-toDoList toDoList">
+        </ul>
+    </div>    
+        <span class="js-weather weather"></span>
+    
+    <script src="clock.js"></script>
+    <script src="greeting.js"></script>
+    <script src="todo.js"></script>
+    <script src="bg.js"></script>
+    <script src="weather.js"></script>
+</body>
+</html>

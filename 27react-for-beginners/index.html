@@ -1,0 +1,46 @@
+<html>
+    <body>
+        <div id="root"></div>
+    </body>
+    <script src="https://unpkg.com/react@17/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/babel">
+        const root = document.querySelector("#root");
+
+        const App = () => {
+            const [minute, setMinute] = React.useState();
+            const [hour, setHour] = React.useState();
+            const onChange = (e) => {
+                if (e.target.id === "minute") {
+                    setHour(e.target.value / 60);
+                    setMinute(e.target.value);
+                } else {
+                    setMinute(e.target.value * 60);
+                    setHour(e.target.value);
+                }
+            };
+            
+            return (
+                <div>
+                    <label htmlFor="minute">분</label>
+                    <input
+                        value = { minute }
+                        id="minute"
+                        placeholder="분을 입력"
+                        onChange = { onChange }
+                    />
+                    <label htmlFor="hour">시간</label>
+                    <input
+                        value = { hour }
+                        id="hour"
+                        placeholder="시간을 입력"
+                        onChange = { onChange }
+                    />
+                </div>
+            );
+        }
+
+        ReactDOM.render(<App />, root);
+    </script>
+</html>

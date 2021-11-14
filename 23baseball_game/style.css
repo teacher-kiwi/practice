@@ -1,0 +1,63 @@
+input::-webkit-inner-spin-button, input::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+}
+
+.wrap {
+    align-items: center;
+    text-align: center;
+}
+
+.numWrap {
+    display: flex;
+    justify-content: center;
+}
+
+.numInput {
+    width: 50px;
+    height: 50px;
+    font-size: 30px;
+    text-align: center;
+    margin: 5px;
+}
+
+.btn {
+    margin: 10px 0;
+    width: 180px;
+    font-size: 20px;
+    text-align: center;
+}
+
+.checklist {
+    list-style: none;
+    line-height: 150%;
+    margin: 0;
+    padding: 0;
+}
+
+.numpad-wrap {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.numpad {
+    width: 140px;
+    padding-top: 130px;
+}
+
+.num-btn {
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    margin: 1px;
+    font-size: 20px;
+}
+
+.invisible {
+    display: none;
+}

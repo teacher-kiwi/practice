@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>html 기초02(table)</title>
+    <link href="https://fonts.googleapis.com/css?family=Lato: 100,300,400,700|Luckiest+Guy|Oxygen:300,400" rel="stylesheet">
+    <link href="style.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+
+    <ul class="navigation">
+        <li><img src="https://content.codecademy.com/courses/web-101/unit-9/htmlcss1-img_logo-shiptoit.png" height="20px;"></li>
+        <li class="active">1학년</li>
+        <li>2학년</li>
+        <li>3학년</li>
+        <li>4학년</li>
+        <li>5학년</li>
+        <li>6학년</li>
+    </ul>
+
+    <div class="search">검색</div>
+    <table>
+        <thead><!-- 표 머리 -->
+            <tr><!-- tr(table row): 줄 -->
+                <th scope="col">반</th><!-- th(table heading): 제목칸 -->
+                <th scope="col">학생수</th><!-- "th" tag의 "scope" attribute는 "row"(행/가로줄), "col"(열/세로줄) 의 value를 가진다-->
+                <th scope="col">비고</th>
+            </tr>
+        </thead>
+        <tbody><!-- 표 본문 -->
+            <tr>
+                <td>1반</td><!-- td(table data): 데이터 -->
+                <td>14</td>
+                <td rowspan="2">통합학급</td>
+            </tr>
+            <tr>
+                <td>2반</td>
+                <td>16</td>
+            </tr>
+            <tr>
+                <td>3반</td>
+                <td>25</td>
+                <td>과밀학급</td>
+            </tr>
+            <tr>
+                <td>4반</td>
+                <td>14</td>
+                <td rowspan="3">다문화</td>
+            </tr>
+            <tr>
+                <td>5반</td>
+                <td>14</td>
+            </tr>
+            <tr>
+                <td>6반</td>
+                <td>15</td>
+            </tr>
+        </tbody>
+        <tfoot><!-- 표 바닥 -->
+            <tr>
+                <td>합계</td>
+                <td>98</td>
+            </tr>
+        </tfoot>
+    </table>
+
+    <table>
+        <thead>
+            <tr> <!-- Row 1 -->
+            <th></th>
+            <th>월요일</th>
+            <th>화요일</th>
+            <th>수요일</th>
+            <th>목요일</th>
+            <th>금요일</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr> <!-- Row 2 -->
+                <th>1교시</th>
+                <td>국어</td><!-- "colspan", "rowspan" attribute에 2 이상의 value로 칸 영역 설정  -->
+                <td>국어</td>
+                <td>국어</td>
+                <td rowspan="2">국어</td>
+                <td>자율</td>
+            </tr>
+            <tr> <!-- Row 3 -->
+                <th>2교시</th>
+                <td>수학</td>
+                <td>동아리</td>
+                <td>수학</td>
+                <td>수학</td>
+            </tr>
+            <tr> <!-- Row 4 -->
+                <th>3교시</th>
+                <td rowspan="2">봄</td>
+                <td rowspan="2">봄</td>
+                <td rowspan="2">봄</td>
+                <td rowspan="2">수학</td>
+                <td rowspan="2">봄</td>
+            </tr>
+            <tr> <!-- Row 5 -->
+                <th>4교시</th>
+            </tr>
+            <tr> <!-- Row 6 -->
+                <th colspan="6">점심시간</th>
+            </tr>
+            <tr> <!-- Row 7 -->
+                <th>5교시</th>
+                <td></td>
+                <td>국어</td>
+                <td>안전</td>
+                <td>봄</td>
+                <td></td>
+            </tr>
+        </tbody>
+      </table>
+
+</body>
+</html>

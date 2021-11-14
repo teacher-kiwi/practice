@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>html 기초05(form3)</title>
+        <link rel="stylesheet" href="style.css" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Fjalla+One" rel="stylesheet">
+    </head>
+    <body>
+        <section class="overlay">
+            <h1>퀴즈!</h1>
+            <p>넌센스 퀴즈를 맞춰보자!<br />(정답은 영어로!)</p>
+            <form action="submission.html" method="GET">
+                <label for="q1">여름마다 일어나는 전쟁은?</label>
+                <br>
+                <input id="q1" name="q1" type="text" placeholder="6글자" required minlength="6" maxlength="6" pattern="[a-zA-Z]+">
+                <!-- pattern attribute로 조건을 만들어 줌. -->
+                <br><br>
+                <label for="q2">돌잔치를 영어로?</label>
+                <br>
+                <input id="q2" name="q2" type="text" placeholder="12글자" required pattern="[a-zA-Z]{12,12}">
+                <!-- pattern attribute로 []안에 조건, {}안에 길이 -->
+                <br>
+                <input type="submit" value="Submit">
+            </form>
+        </section>
+    </body>
+</html>

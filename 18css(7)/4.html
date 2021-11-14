@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox / flex-grow & shrink</title>
+</head>
+<body>
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
+    <style>
+        body {margin: 0; border: 0; font-family: 'Roboto Mono', monospace;}
+        h1 {font-size: 18px;}
+        h2 {font-size: 16px;}
+        h1, h2 {text-align: center;}
+        .container {display: flex; background-color: Whitesmoke; justify-content: center; min-height: 200px; align-items: center;}
+        .box {width: 150px; height: 150px; background-color: Dodgerblue; border: 2px solid lightgrey; margin: 10px 30px;}
+
+        /* grow는 기본값 0, shrink는 기본값 1 */
+        .top.side {flex-grow: 1; flex-shrink: 2;}
+        .top.center {flex-grow: 1;}
+        .middle.side {flex-shrink: 0;}
+        .middle.center {flex-grow: 1;}
+        .bottom.side {flex-grow: 1;}
+        .bottom.center {flex-grow: 2; flex-shrink: 2;}
+
+    </style>
+
+    <h1>flex-grow & flex-shrink</h1>
+    <h1>Step 1</h1>
+    <div class="container">
+        <div class="box top side">
+            <h2>+1</h2>
+            <h2>-2</h2>
+        </div>
+        <div class="box top center">
+            <h2>+1</h2>
+            <h2>-1</h2>
+        </div>
+        <div class="box top side">
+            <h2>+1</h2>
+            <h2>-2</h2>
+        </div>
+    </div>
+
+    <h1>Step 2</h1>
+    <div class="container">
+        <div class="box middle side">
+            <h2>+0</h2>
+            <h2>-0</h2>
+        </div>
+        <div class="box middle center">
+            <h2>+1</h2>
+            <h2>-1</h2>
+        </div>
+        <div class="box middle side">
+            <h2>+0</h2>
+            <h2>-0</h2>
+        </div>
+    </div>
+    
+    <h1>Step 3</h1>
+    <div class="container">
+        <div class="box bottom side">
+            <h2>+1</h2>
+            <h2>-1</h2>
+        </div>
+        <div class="box bottom center">
+            <h2>+2</h2>
+            <h2>-2</h2>
+        </div>
+        <div class="box bottom side">
+            <h2>+1</h2>
+            <h2>-1</h2>
+        </div>
+    </div>
+
+</body>
+</html>
