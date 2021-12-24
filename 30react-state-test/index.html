@@ -1,0 +1,48 @@
+<html>
+  <body>
+    <pre>
+const [value, setValue] = React.useState("cat");
+const handleClick1 = () => setValue("cat");
+const handleClick2 = () => setValue("dog");
+          
+return {
+  &#60;button onClick={handleClick1}>고양이사진&#60;/button>
+  &#60;button onClick={handleClick2}>강아지사진&#60;/button>
+  &#60;img src={`https://source.unsplash.com/random/300x300?${value}&q=10`}/>
+}
+    </pre>
+    <div id="root"></div>
+  </body>
+  <script src="https://unpkg.com/react@17/umd/react.production.min.js"></script>
+  <script src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <style>
+    button {
+      font-size: larger;
+      width: 130px;
+      margin: 10px;
+    }
+  </style>
+  <script type="text/babel">
+    const root = document.querySelector("#root");
+
+    const App = () => {
+      const [value, setValue] = React.useState("cat");
+      const handleClick1 = () => setValue("cat");
+      const handleClick2 = () => setValue("dog");
+
+      return (
+        <div>
+          <button onClick={handleClick1}>고양이사진</button>
+          <button onClick={handleClick2}>강아지사진</button>
+          <br />
+          <img
+            src={`https://source.unsplash.com/random/300x300?${value}&q=10`}
+          />
+        </div>
+      );
+    };
+
+    ReactDOM.render(<App />, root);
+  </script>
+</html>
