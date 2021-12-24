@@ -36,6 +36,7 @@ return {
           <button onClick={handleClick1}>고양이사진</button>
           <button onClick={handleClick2}>강아지사진</button>
           <br />
+          <p>이것은 {value === "cat" ? "고양이" : "강아지"}사진입니다.</p>
           <img
             src={`https://source.unsplash.com/random/300x300?${value}&q=10`}
           />
